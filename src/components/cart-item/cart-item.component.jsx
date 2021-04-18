@@ -1,5 +1,6 @@
 import "./cart-item.styles.scss"
 
+// The below pattern is advance desturcturing
 const CartItem = ({item: {imageUrl, price, name, quantity}}) => {
     return ( 
         <div className="cart-item">

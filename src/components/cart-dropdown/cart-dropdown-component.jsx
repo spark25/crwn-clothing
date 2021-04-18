@@ -18,6 +18,7 @@ const CartDropdown = ({ cartItems }) => {
     );
 }
 
+// The below pattern is advance desturcturing
 const mapStateToProps = ({ cart: { cartItems } }) => ({
     cartItems
 })
