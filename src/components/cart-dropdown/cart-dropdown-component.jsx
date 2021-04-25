@@ -5,6 +5,8 @@ import CartItem from "../cart-item/cart-item.component";
 
 import { connect } from 'react-redux'
 
+import { selectCartItems } from "../../redux/cart/cart.selector";
+
 const CartDropdown = ({ cartItems }) => {
     return (
         <div className="cart-dropdown">
@@ -19,8 +21,8 @@ const CartDropdown = ({ cartItems }) => {
 }
 
 // The below pattern is advance desturcturing
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-    cartItems
+const mapStateToProps = (state) => ({
+    cartItems : selectCartItems(state)
 })
 
 export default connect(mapStateToProps)(CartDropdown)
